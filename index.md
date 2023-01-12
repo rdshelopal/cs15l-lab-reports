@@ -1,8 +1,8 @@
-Ryandeep's Website 
+#Ryandeep's Website 
 
-> Markdown Commands
+##Markdown Commands
 
-# Markdown
+> Markdown
 
 ---
 
@@ -16,7 +16,7 @@ Ryandeep's Website
 
 [Link](https://ucsd.edu/)
 
-![Image]([http://url/a.png](https://images.pexels.com/photos/158109/kodiak-brown-bear-adult-portrait-wildlife-158109.jpeg?cs=srgb&dl=pexels-pixabay-158109.jpg&fm=jpg))
+![Image](https://images.pexels.com/photos/158109/kodiak-brown-bear-adult-portrait-wildlife-158109.jpeg?cs=srgb&dl=pexels-pixabay-158109.jpg&fm=jpg)
 
 ---
 
