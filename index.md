@@ -1,6 +1,6 @@
-#Ryandeep's Website 
+# Ryandeep's Website 
 
-##Markdown Commands
+## Markdown Commands
 
 > Markdown
 
@@ -28,7 +28,7 @@
 
 ---
 
-*# Markdown*
+*Italic*
 
 ```
 # code block
@@ -36,4 +36,4 @@ print '3 backticks or'
 print 'indent 4 spaces'
 ```
 
-`Inline code` with backticks
+`Inline code` 
