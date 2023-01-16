@@ -2,7 +2,7 @@
 
 By: Ryandeep Shelopal
 
-**To begin logging into a course-specific account on ieng6, you must follow these steps.**
+**Dear 15L Students, To successfully log into a course-specific account on ieng6, you must follow these steps.**
 
 ## 1. Installing Visual Studio Code
 
