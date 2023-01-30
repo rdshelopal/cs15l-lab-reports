@@ -64,8 +64,10 @@ public void testReversedCase()
     assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
 }
 ```
+
 Symptoms
 ---
+
 > Fail-Induced
 
 
