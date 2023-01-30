@@ -42,8 +42,8 @@ class Handler implements URLHandler {
 
 ## Part 2 - JUnit
 
-Failure-Inducing Input
----
+> Failure-Inducing Input
+
 ```
 @Test
 public void testReversedCase()
@@ -52,8 +52,8 @@ public void testReversedCase()
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input1));
 }
 ```
-Non-Failure-Inducing Input
----
+> Non-Failure-Inducing Input
+
 ```
 @Test
 public void testReversedCase() 
