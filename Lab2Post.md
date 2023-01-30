@@ -53,6 +53,7 @@ public void testReversedCase()
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input1));
 }
 ```
+
 Non-Failure-Inducing Input
 ---
 
