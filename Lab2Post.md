@@ -42,7 +42,8 @@ class Handler implements URLHandler {
 
 ## Part 2 - JUnit
 
-> Failure-Inducing Input
+Failure-Inducing Input
+---
 
 ```
 @Test
@@ -52,7 +53,8 @@ public void testReversedCase()
     assertArrayEquals(new int[]{3,2,1}, ArrayExamples.reversed(input1));
 }
 ```
-> Non-Failure-Inducing Input
+Non-Failure-Inducing Input
+---
 
 ```
 @Test
@@ -66,14 +68,18 @@ Symptoms
 ---
 > Fail-Induced
 
+
 ![Image](https://user-images.githubusercontent.com/122515834/215419902-eed2291f-f820-4765-8ee2-37c01bd05312.png)
 > Non-Fail Induced
+
 
 ![Image](https://user-images.githubusercontent.com/122515834/215420060-4defadff-ad6b-4c66-aefb-8a1d912cb122.png)
 
 The Bug
 ---
+
 > Before fix
+
 ```
 static int[] reversed(int[] arr) 
 {
@@ -85,7 +91,9 @@ static int[] reversed(int[] arr)
     return arr;
  }
 ```
+
 > After fix
+
 ```
 static int[] reversed(int[] arr)
 {
