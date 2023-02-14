@@ -56,12 +56,12 @@ By: Ryandeep Shelopal
 > The `-i` option for grep will ignore case distinctions in pattern and input data. This is useful because if you are looking for a string in a text file, it will print all cases, rather than having to repeat the grep command for every case. This can work well in conjunction with the `-w` as it will allow us to find `"place"` as a complete word for all cases, rather than just part of a string, as seen in second example.
 
 4. `-c` option for grep
-* ```
+  ```
   grep -c 'India' WhatToIndia.txt
   
   28
   ```
-* ```
+  ```
   grep -cr 'History' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2
   
   /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Algarve-History.txt:1
