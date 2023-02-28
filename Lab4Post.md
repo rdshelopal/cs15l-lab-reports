@@ -32,6 +32,7 @@ Keys Pressed: `<nano L> <tab> <j> <tab> <enter>, <ctrl + w> <index1 += 2> <enter
 ![Image](https://user-images.githubusercontent.com/122515834/221760692-e24387dd-9e51-4f03-aa6a-b4ab8df7cd98.png)
 Keys Pressed: `<ctrl+r> <javac> <Enter>, <ctrl+r> <java> <Enter>`
 * I once again typed ctrl + r to access my command history, typed javac to compile, and then typed java to run, similar to step 6, and the tests passed as expected from our changes in the previous step.
+
 ## 9. Commit and push the resulting change to Github account (choose any commit message)
 ![Image](https://user-images.githubusercontent.com/122515834/221760761-407e981d-7583-4225-bdc2-782e4020f6ca.png)
 Keys Pressed: `<git add> <L> <tab> <j> <tab> <Enter>, <git commit -m "updated"> <Enter>`
