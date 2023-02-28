@@ -5,7 +5,7 @@ By: Ryandeep Shelopal
 ## 4. Log into ieng6
 ![Image](https://user-images.githubusercontent.com/122515834/221757224-c3ba34a0-60bd-4e02-81f0-54cb10085290.png)
 Keys Pressed: `<ctrl+r> <'s'> <Enter>`
-* I pressed the ctrl + r keys to access my command history, followed by `'s'` to filter through the history to locate the ssh command, and then pressed `enter`
+* I pressed the ctrl + r keys to access my command history, followed by 's' to filter through the history to locate the ssh command, and then pressed enter
   to login as the account has been configured to login without typing a password by generating SSH keys for ieng6.
 
 
