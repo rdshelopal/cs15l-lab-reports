@@ -5,7 +5,7 @@ By: Ryandeep Shelopal
 ## 4. Log into ieng6
 ![Image](https://user-images.githubusercontent.com/122515834/221757224-c3ba34a0-60bd-4e02-81f0-54cb10085290.png)
 Keys Pressed: `<ctrl+r> <'s'> <Enter>`
-* I pressed the `ctrl + r` keys to access my command history, followed by `'s'` to filter through the history to locate the ssh command, and then pressed `enter`
+* I pressed the ctrl + r keys to access my command history, followed by `'s'` to filter through the history to locate the ssh command, and then pressed `enter`
   to login as the account has been configured to login without typing a password by generating SSH keys for ieng6.
 
 
@@ -24,13 +24,13 @@ Keys Pressed: `<cd lab7> <Enter>, <ctrl+r> <javac> <Enter>, <ctrl+r> <java> <Ent
 ## 7. Edit the code file to fix the failing test
 ![Image](https://user-images.githubusercontent.com/122515834/221760558-040dd27d-7b58-4af7-96a1-35626dd40e11.png)
 ![Image](https://user-images.githubusercontent.com/122515834/221760594-e99dbff4-0608-4e1c-8f6d-b1dd283c4c0d.png)
-Keys Pressed: `<nano L> <tab> <j> <tab> <enter>, <ctrl + w> <index1 += 2> <enter>, <index2 += 1>, <ctrl + o> <Enter> <ctrl + x>
+Keys Pressed: `<nano L> <tab> <j> <tab> <enter>, <ctrl + w> <index1 += 2> <enter>, <index2 += 1>, <ctrl + o> <Enter> <ctrl + x>`
 * I first typed nano L, followed by the tab key to complete the file name, ListExamples and did the same for .java
 * I then typed ctrl+w to search for the error which was index1 += 2, i then changed it to index2 +=1, typed ctrl + o, followed by enter to save, and ctrl+x to exit.
 
 ## 8. Run the tests, demonstrating that they now succeed
 ![Image](https://user-images.githubusercontent.com/122515834/221760692-e24387dd-9e51-4f03-aa6a-b4ab8df7cd98.png)
-Keys Pressed: <ctrl+r> <javac> <Enter>, <ctrl+r> <java> <Enter>`
+Keys Pressed: `<ctrl+r> <javac> <Enter>, <ctrl+r> <java> <Enter>`
 * I once again typed ctrl + r to access my command history, typed javac to compile, and then typed java to run, similar to step 6, and the tests passed as expected from our changes in the previous step.
 ## 9. Commit and push the resulting change to Github account (choose any commit message)
 ![Image](https://user-images.githubusercontent.com/122515834/221760761-407e981d-7583-4225-bdc2-782e4020f6ca.png)
