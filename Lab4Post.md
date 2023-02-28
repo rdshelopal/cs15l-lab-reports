@@ -34,7 +34,7 @@ Keys Pressed: `<ctrl+r> <javac> <Enter>, <ctrl+r> <java> <Enter>`
 * I once again typed ctrl + r to access my command history, typed javac to compile, and then typed java to run, similar to step 6, and the tests passed as expected from our changes in the previous step.
 ## 9. Commit and push the resulting change to Github account (choose any commit message)
 ![Image](https://user-images.githubusercontent.com/122515834/221760761-407e981d-7583-4225-bdc2-782e4020f6ca.png)
-Keys Pressed: <git add> <L> <tab> <j> <tab>, <git commit -m "updated">
+Keys Pressed: `<git add> <L> <tab> <j> <tab>, <git commit -m "updated">`
 * I typed git add, followed by L and tab to complete the ListExamples file name, and did the same for the j in java.
 * I then typed git commit -m "updated", which gives commit the message "updated".
 
