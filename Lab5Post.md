@@ -5,77 +5,67 @@ By: Ryandeep Shelopal
 
 ## Command-line options for find (with examples)
 
-[Source1](https://www.gnu.org/software/grep/manual/grep.html) and
-[Source2](https://man7.org/linux/man-pages/man1/find.1.html)
+[Source1](https://linux.die.net/man/1/find) and
+[Source2](https://man7.org/linux/man-pages/man1/find.1.html) 
 
-* `-r` option for grep, which reads all files under each directory, recursively. 
-
-  ```
-  grep -r 'garden city' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1
-  
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1/WhereToIndia.txt: 
-  “garden city. ” The spectacular growth of India’ s boom town in
-  ```
-  ```
-  grep -rh 'garden city' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1
-  
-  “garden city. ” The spectacular growth of India’ s boom town in
-  ```
-> The `-r` option for grep is allowing us to find the string `"garden city"` in the directory of berlitz1 by going through all the files in that directory recursively, which means that it will go through the contents of berlitz1, as well as the subdirectories within berlitz1. This can be useful as the word could be in multiple files of berlitz1, so instead of checking each file one at a time, this allows us to quickly go through all the files in berlitz1, including its subdirectories. This can be used in conjunction with `-h` which would return the string without the path, in turn helping clear clutter.
-
-* `-n` option for grep, which will tell us which line numbers our target string is found.
+* `-iname` option for find is allowing us to find the file by looking for a match from the base of the file's name and the -i portion makes this command case insensitive. 
 
   ```
-  grep -n 're-education' China-WhatToDo.txt
+  find ~/ -iname introindia.txt
   
-  55:During the Cultural Revolution, Beethoven and Tchaikovsky were banned and many musicians banished to the countryside 
-  for “re-education.” So if you go    to a concert today, you’ll sense the drama of recovery from mad xenophobia. This 
-  needn’t obscure the fact that some professional musicians haven’t yet reached world standards. But the enthusiasm 
-  of players and audience is exciting in itself.
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data-old/written_2/travel_guides/berlitz1/IntroIndia.txt
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data-old2/written_2/travel_guides/berlitz1/IntroIndia.txt
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1/IntroIndia.txt
   ```
   ```
-  grep -rn 'garden city' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1
+  find . -iname california-whattodo.txt 'garden city' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1
   
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1/WhereToIndia.txt:
-  2130: “garden city. ” The spectacular growth of India’ s boom town in
+  ./California-WhatToDo.txt
   ```
-> The `-n` option for grep will prefix each line where our grep input `"re-education"` or `"garden city"` occurs with the corresponding line in the txt file. This way we will know in which line of the file, the string is present. Knowing the line number the search term appears on can be useful if you have a very large file, in which knowing the line number can help navigate the file easier. This is useful especially in conjunction with other commands, as in my second example I utilize `-rn` to search through all the files in the directory to see which line the word was present.
+> As we can see in our examples, the IntroIndia.txt file has capitalization, similar to the California-WhatToDo.txt, but by combination of -name and -i, into -iname, we are able to obtain the files regardless of case sensitivity. This is very useful as if you are working with many files, there is a chance that some files contain capitals, so rather than checking them each individually, this makes the search more specific and efficient.
 
-* `-i` option for grep, which will ignore case distinctions in both the pattern and input files when looking for all occurences of a string in a large txt file.
-
+* `-type` option for find, will find a file depending on the file type, which could be a regular file `f`, directory `d`, etc.
   ```
-  grep -i 'place' WhatToIndia.txt
+  find . -name grep_results.txt -type f
   
-        still a great place to shop.
-        products you like from places you will be visiting later, such as
-        Place in New Delhi and Mumbai’s Pundole and Chemould Galleries, not to
-        to buy until your last day. The best places to buy Indian spices are
+  ./grep_results.txt
   ```
   ```
-  grep -iw 'place' WhatToIndia.txt
+  find ~/ -name written_2 -type d
   
-        still a great place to shop.
-        Place in New Delhi and Mumbai’s Pundole and Chemould Galleries, not to
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2
   ```
-> The `-i` option for grep will ignore case distinctions in pattern and input data. This is useful because if you are looking for a string in a text file, it will print all cases, rather than having to repeat the grep command for every case. This can work well in conjunction with the `-w` as it will allow us to find `"place"` as a complete word for all cases, rather than just part of a string, as seen in second example.
+> In these examples, I used the -type f and -type d commands to find a specific directory written_2 and file grep_results.txt. This command can be useful because if you were to have a directory and file with the same name, the find command would show paths to both types, however utilizing the -type command allows us to narrow our search and be more specific.
 
-* `-c` option for grep, which will print a count of matching lines for each string input from our file.
+* `-size` option for find will find a file according to it's size, which can be denoted by `b` (512-byte blocks), `c` (bytes), etc. And you can also utilize whether the file is greater than, less than, or exactly a specific size by using `+` and `-`.
 
   ```
-  grep -c 'India' WhatToIndia.txt
+  find ~/ -size 50b
   
-  28
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz1/HandRJamaica.txt
   ```
   ```
-  grep -cr 'History' /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2
+  find ~/ -size +1M
   
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Algarve-History.txt:1
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Algarve-Intro.txt:0
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Algarve-WhatToDo.txt:0
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Algarve-WhereToGo.txt:0
-  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/written_2/travel_guides/berlitz2/Amsterdam-History.txt:1
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/wavelet/.git/objects/pack/pack-569e4d7fd1ecca80e90cbcafc42f067ef12e27f3.pack
+  /home/linux/ieng6/cs15lwi23/cs15lwi23aqp/skill-demo1-data/.git/objects/pack/pack-b98cb6a4ca64cc7b2944f0fa07d3e03927d66064.pack
   ```
-> This can be useful because if you search for a string and it occurs many times. Instead of counting each occurance one at a time, we can get this information right way by using this command. This can be useful in the scenario in which you have a txt file with student grades A-F. You can find the total amount of students that fall under each category and calculate useful information regarding class averages, etc. This can also be used in conjunction with `-v` and print the lines that do not match. This can also be used with `-r` as i've used in the second example to go through all the files in the berlitz2 directory to find the word `"History"`, and as seen it tells us how many times it occurs, even if it occurs 0 times.
+> In the first example, I try and find files of 50b (50 for 512-byte blocks), which would be the default if no specification is given and got back the HandRJamaica.txt file path. Similarly for the second example, i find a file that is greater than 1 mebibyte, indicated by the +, and got returned 2 files with the .pack extention. This can be useful because if you have multiple versions of a file, it is likely that the latest file has the greatest size, so using -size is a quick way to pull it up. This could also be useful if you want your file to be within a certain size, this allows you to check and keep it within appropriate limits.
+
+* `-maxdepth` option for find, is used to specify the maximum depth of the search, this is indicated by providing a non-negative integer corrresponding to levels of directories.
+
+  ```
+  find -maxdepth 1 -name grepResults.txt
+  
+  ./grepResults.txt
+  ```
+  ```
+  find -maxdepth 3 -name grepResults.txt
+  
+  ./skill-demo1-data/written_2/grepResults.txt
+  ./skill-demo1-data/grepResults.txt
+  ```
+> In the first example, i am currently in the skill-demo1-data directory which is holding the grepResults.txt file. So once i ran find -maxdepth 1 -name grepResults.txt, it specifically limited the search of the grepResults.txt file to that current directory. If i had used 2 instead of 1, it would've shown another path to a grepResults file which i created on the next level. In the second example, i am in the home directory, and tried to find the same file, but with 3 as my argument, so it would go 3 directories deep to find the other grepResults.txt file i made myself which was missed in the first example. This can be useful because if you have many files with the same name as i did in the second example, you can limit the search to a specific level by using maxdepth.
 
 
 
